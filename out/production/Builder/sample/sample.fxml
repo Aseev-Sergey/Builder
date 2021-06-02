@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="325.0" prefHeight="60.0" prefWidth="577.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#clickBegin" text="Начало" />
+            <Button layoutX="204.0" mnemonicParsing="false" onAction="#clickEnd" text="Конец" />
+            <Button layoutX="64.0" mnemonicParsing="false" onAction="#clickOperation" text="Действие" />
+            <Button layoutX="134.0" mnemonicParsing="false" onAction="#clickSolution" text="Решение" />
+            <Button layoutX="257.0" mnemonicParsing="false" onAction="#clickClear" text="Очистить" />
+            <Button layoutX="327.0" mnemonicParsing="false" onAction="#clickClose" text="Закрыть" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </AnchorPane>
+      <Pane fx:id="pane" layoutX="143.0" layoutY="14.0" prefHeight="150.0" prefWidth="300.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="75.0" />
+   </children>
+</AnchorPane>
