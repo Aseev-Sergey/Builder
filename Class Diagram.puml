@@ -1,0 +1,24 @@
+@startuml
+
+package sample <<Folder>>{
+package Nodes <<Folder>>{
+class Node extends javafx.scene.Group
+class Begin implements NodeBuilder
+class End implements NodeBuilder
+class Solution implements NodeBuilder
+class Operation implements NodeBuilder
+interface NodeBuilder
+package Shapes <<Folder>>{
+class Rect extends javafx.scene.shape.Rectangle
+class Rhombus extends javafx.scene.shape.Rectangle
+class Circ extends javafx.scene.shape.Circle
+class FilledCirc extends javafx.scene.shape.Circle
+class InnerCirc extends javafx.scene.shape.Circle
+}
+}
+class Main extends javafx.application.Application
+class Controller
+class Director
+}
+
+@enduml
