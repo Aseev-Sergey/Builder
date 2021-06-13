@@ -3,38 +3,16 @@ package sample;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.scene.layout.Pane;
-import sample.Nodes.*;
+import sample.schemes.*;
 
 public class Controller {
 
     public Pane pane;
     Director director = new Director();
-    Node node = new Node();
-
-public void clickBegin (ActionEvent actionEvent){
-    paneClear();
-    node = director.construct(new Begin());
-    paneAdd(node);
-}
-
-public void clickEnd (ActionEvent actionEvent){
-    paneClear();
-    node = director.construct(new End());
-    paneAdd(node);
-}
-
-public void clickOperation(ActionEvent actionEvent){
-    paneClear();
-    node = director.construct(new Operation());
-    paneAdd(node);
-}
-
-public void clickSolution(ActionEvent actionEvent){
-    paneClear();
-    node = director.construct(new Solution());
-    paneAdd(node);
-    pane.setRotate(-45);
-}
+    Scheme scheme = new Scheme();
+    final private double X = 195;
+    final private double Y = 30;
+    final private double R = 20;
 
     public void clickClear(ActionEvent actionEvent){
         paneClear();
@@ -46,10 +24,27 @@ public void clickSolution(ActionEvent actionEvent){
 
     private void paneClear(){
         pane.getChildren().clear();
-        pane.setRotate(0);
     }
 
-    private void paneAdd(Node node){
-        pane.getChildren().add(node);
+    private void paneAdd(Scheme scheme){
+        pane.getChildren().add(scheme);
+    }
+
+    public void clickLinear(ActionEvent actionEvent) {
+        paneClear();
+        scheme = director.construct(new Linear(X, Y, R));
+        paneAdd(scheme);
+    }
+
+    public void clickBranch(ActionEvent actionEvent) {
+        paneClear();
+        scheme = director.construct(new Branch(X, Y, R));
+        paneAdd(scheme);
+    }
+
+    public void clickCycle(ActionEvent actionEvent) {
+        paneClear();
+        scheme = director.construct(new Cycle(X, Y, R));
+        paneAdd(scheme);
     }
 }

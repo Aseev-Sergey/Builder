@@ -5,15 +5,14 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Pane fx:id="pane" layoutX="143.0" layoutY="14.0" prefHeight="150.0" prefWidth="300.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="75.0" />
+      <Pane fx:id="pane" layoutX="143.0" layoutY="14.0" prefHeight="150.0" prefWidth="300.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
       <HBox alignment="CENTER" layoutX="50.0" layoutY="321.0" prefHeight="58.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#clickBegin" text="Начало" />
-            <Button mnemonicParsing="false" onAction="#clickOperation" text="Действие" />
-            <Button mnemonicParsing="false" onAction="#clickSolution" text="Решение" />
-            <Button mnemonicParsing="false" onAction="#clickEnd" text="Конец" />
+            <Button mnemonicParsing="false" onAction="#clickLinear" text="Линейная" />
+            <Button mnemonicParsing="false" onAction="#clickBranch" text="Развлетвляющая" />
+            <Button mnemonicParsing="false" onAction="#clickCycle" text="Цикл" />
             <Button mnemonicParsing="false" onAction="#clickClear" text="Очистить" />
             <Button mnemonicParsing="false" onAction="#clickClose" text="Закрыть" />
          </children>

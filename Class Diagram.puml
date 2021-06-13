@@ -1,19 +1,18 @@
 @startuml
 
 package sample <<Folder>>{
-package Nodes <<Folder>>{
-class Node extends javafx.scene.Group
-class Begin implements NodeBuilder
-class End implements NodeBuilder
-class Solution implements NodeBuilder
-class Operation implements NodeBuilder
-interface NodeBuilder
-package Shapes <<Folder>>{
-class Rect extends javafx.scene.shape.Rectangle
-class Rhombus extends javafx.scene.shape.Rectangle
-class Circ extends javafx.scene.shape.Circle
-class FilledCirc extends javafx.scene.shape.Circle
-class InnerCirc extends javafx.scene.shape.Circle
+package schemes <<Folder>>{
+class Scheme extends javafx.scene.Group
+class Branch implements SchemeBuilder
+class Cycle implements SchemeBuilder
+class Linear implements SchemeBuilder
+interface SchemeBuilder
+package nodes <<Folder>>{
+class Begin extends javafx.scene.shape.Circle
+class End
+class Solution extends javafx.scene.shape.Rectangle
+class Operation extends javafx.scene.shape.Rectangle
+class Arrows
 }
 }
 class Main extends javafx.application.Application

@@ -1,17 +1,17 @@
 package sample;
 
-import sample.Nodes.Node;
-import sample.Nodes.NodeBuilder;
+import sample.schemes.Scheme;
+import sample.schemes.SchemeBuilder;
 
 public class Director {
 
-    public Node construct(NodeBuilder nodeBuilder){
+    public Scheme construct(SchemeBuilder schemeBuilder){
 
-        nodeBuilder.buildRect();
-        nodeBuilder.buildRhombys();
-        nodeBuilder.buildCirc();
-        nodeBuilder.buildInnerCirc();
-        nodeBuilder.buildFilledCirc();
-        return nodeBuilder.getNode();
+        schemeBuilder.buildBegin();
+        schemeBuilder.buildOper();
+        schemeBuilder.buildSol();
+        schemeBuilder.buildEnd();
+        schemeBuilder.buildArrow();
+        return schemeBuilder.getScheme();
     }
 }
